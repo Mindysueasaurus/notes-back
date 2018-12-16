@@ -11,7 +11,7 @@ server.use(cors());
 server.use(express.json());
 //server.use('/api/notes', noteRouter);
 
-server.get('/',  async (req, res) => {
+server.get('/api/notes/',  async (req, res) => {
   try {
       const notes = await db.getAll();
       res.status(200).json(notes)
