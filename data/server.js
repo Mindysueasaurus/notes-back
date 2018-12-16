@@ -3,7 +3,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const db = require('../data/helpers/notesHelpers');
 
-const noteRouter = require('../api/noteRouter');
+//const noteRouter = require('../api/noteRouter');
 const server = express();
 
 server.use(helmet());
