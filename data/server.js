@@ -9,7 +9,7 @@ const server = express();
 server.use(helmet());
 server.use(cors());
 server.use(express.json());
-server.use('/api/notes', noteRouter);
+//server.use('/api/notes', noteRouter);
 
 server.get('/',  async (req, res) => {
   try {
