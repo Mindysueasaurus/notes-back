@@ -3,7 +3,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const db = require('../data/helpers/notesHelpers');
 
-//const noteRouter = require('../api/noteRouter');
+const noteRouter = require('../api/noteRouter');
 const server = express();
 
 server.use(helmet());
@@ -15,14 +15,14 @@ server.get('/', (req, res) => {
     res.send(`Api running on port`)
 })
 
-server.get('/api/notes/',  async (req, res) => {
-  try {
-      const notes = await db.getAll();
-      res.status(200).json(notes)
-  } 
-  catch (err) {
-      res.status(500).json(err);
-  }
-});
+// server.get('/api/notes/',  async (req, res) => {
+//   try {
+//       const notes = await db.getAll();
+//       res.status(200).json(notes)
+//   } 
+//   catch (err) {
+//       res.status(500).json(err);
+//   }
+// });
 
 module.exports = server;
