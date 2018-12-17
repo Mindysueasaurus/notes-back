@@ -19,7 +19,7 @@ module.exports = {
 
 
   production: {
-    client: 'postgresql',
+    client: 'pg',
     connection: dbConnection,
     pool: {
       min: 2,
