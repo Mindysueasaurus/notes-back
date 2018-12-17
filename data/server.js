@@ -15,14 +15,14 @@ server.get('/', (req, res) => {
     res.send(`Api running on port`)
 })
 
-// server.get('/api/notes/',  async (req, res) => {
-//   try {
-//       const notes = await db.getAll();
-//       res.status(200).json(notes)
-//   } 
-//   catch (err) {
-//       res.status(500).json(err);
-//   }
-// });
+server.get('/api/notes/',  async (req, res) => {
+  try {
+      const notes = await db.getAll();
+      res.status(200).json(notes)
+  } 
+  catch (err) {
+      res.status(500).json(err);
+  }
+});
 
 module.exports = server;
